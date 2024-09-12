@@ -1,8 +1,4 @@
-# Number Input Component
-
-## Overview
-
-Shadcn Input Number
+# Shadcn Input Number
 
 ## Code
 
@@ -165,4 +161,39 @@ export const NumberInput = forwardRef<HTMLInputElement, NumberInputProps>(
     );
   }
 );
+```
+
+## Usage
+
+```typescript
+import { NumberInput } from './components/number-input';
+
+<NumberInput
+  placeholder="Enter number"
+  defaultValue={10}
+/>
+<NumberInput
+  placeholder="Enter number"
+  min={10}
+  max={100}
+  defaultValue={10}
+/>
+<NumberInput
+  placeholder="Amount"
+  prefix="$"
+  suffix=" USD"
+  defaultValue={100}
+/>
+<NumberInput
+  placeholder="Enter decimal number"
+  decimalScale={2}
+/>
+<NumberInput
+  placeholder="Step by 5"
+  stepper={5}
+/>
+<NumberInput
+  placeholder="Formatting"
+  thousandSeparator={','}
+/>
 ```
